@@ -27,9 +27,9 @@ class FeedbackService(
     fun createFeedback(request: CreateFeedbackRequest): FeedbackResponse {
         // 创建新的反馈对象
         val feedback = Feedback(
-            title = request.title,
+            title = request.title ?: "无标题", // 如果title为null，设置默认值
             content = request.content,
-            type = request.type,
+            type = request.type ?: "其他",   // 如果type为null，设置默认值
             email = request.email,
             userName = request.userName
         )

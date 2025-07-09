@@ -11,11 +11,11 @@ import java.time.LocalDateTime
  * 创建反馈请求DTO - 前端发送给后端的数据格式
  */
 data class CreateFeedbackRequest(
-    val title: String,           // 反馈标题
-    val content: String,         // 反馈内容
-    val type: String,            // 反馈类型
-    val email: String? = null,   // 用户邮箱（可选）
-    val userName: String? = null // 用户姓名（可选）
+    val title: String? = null,    // 反馈标题（可选）
+    val content: String,          // 反馈内容（必选）
+    val type: String? = null,     // 反馈类型（可选）
+    val email: String? = null,    // 用户邮箱（可选）
+    val userName: String? = null  // 用户姓名（可选）
 )
 
 /**
